@@ -1,12 +1,8 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
 
-&default_transform { // Offset of 3 because the left side has 3 columns
-    col-offset = <7>;
-};
-
 &physical_layout0 {
     kscan = <&kscan0>;
-    transform = <&matrix_transform0>;
+    transform = <&default_transform>;
 };
 
 / {
