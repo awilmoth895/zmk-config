@@ -1,0 +1,12 @@
+file_format: "1"
+id: penny
+name: penny
+type: shield
+url: https://github.com/awilmoth895/zmk-config
+requires: [pro_micro]
+exposes:
+features:
+  - keys
+siblings:
+  - penny_left
+  - penny_right
