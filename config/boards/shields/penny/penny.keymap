@@ -1,6 +1,18 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#define COLEMAK  0
+#define QT       1
+#define SWAP     2
+#define MOUSE    3
+#define NUM_NAV  4
+#define PROG     5
+#define POWER    6
+#define MODS     7
+#define MODS_NAV 8
 
 / {
         keymap {
@@ -13,10 +25,39 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B                 &kp J &kp L   &kp U     &kp Y   &kp SEMI &kp BSPC
-   &kp LCTRL &kp A &kp R &kp S &kp T &kp G                 &kp M &kp N   &kp E     &kp I   &kp O &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V                 &kp K &kp H   &kp COMMA &kp DOT &kp FSLH &kp ESC
-                         &kp A &kp U &kp S &kp T &kp I &kp N &kp J &kp W
+   &tog NUM_NAV &kp Q       &kp W &kp F    &kp P          &kp B                                         &kp J     &kp L         &kp U     &kp Y   &kp SEMI       &kp DEL
+   &kp TAB      &kp A       &kp R &kp S    &kp T          &kp G                                         &kp M     &kp N         &kp E     &kp I   &kp O          &kp SQT
+   &mo SWAP     &lt MOUSE Z &kp X &kp C    &kp D          &kp V                                         &kp K     &kp H         &kp COMMA &kp DOT &lt MOUSE FSLH &mo SWAP
+                                  &kp LALT &mt LCTRL DEL  &lt LSHFT BSPC &lt PROG TAB   &lt NUM_NAV ESC &kp SPACE &lt POWER RET &kp LGUI 
+                        >;
+                };
+        };
+                        Qwertly_toggle {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &trans &kp Q  &kp W &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I     &kp O   &kp O    &kp DEL
+   &trans &kp A  &kp S &kp D  &kp F  &kp G           &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &trans &trans &kp C &kp C  &kp V  &kp B           &kp N  &kp M  &kp COMMA &kp DOT &trans   &mo SWAP
+                       &trans &trans &trans &trans   &trans &trans &trans    &trans
+                        >;
+                };
+        };
+
+        swap_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &trans  &kp Q    &kp W   &kp F     &kp P          &kp B                           &kp B  &kp P  &kp F &kp W &kp Q &trans
+   &kp SQT &kp O    &kp I   &kp E     &kp N          &kp M                           &kp G  &kp T  &kp S &kp R &kp A &none
+   &trans  &kp FSLH &kp DOT &kp COMMA &kp H          &kp K                           &kp V  &kp D  &kp C &kp X &kp Z &trans
+                            &kp LALT  &mt LCTRL DEL  &lt LSHFT SPACE &trans   &trans &trans &trans &trans 
                         >;
                 };
         };
