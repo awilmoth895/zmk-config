@@ -32,7 +32,8 @@
                                   &kp LALT &mt LCTRL DEL  &lt LSHFT BSPC &lt PROG TAB   &lt NUM_NAV ESC &kp SPACE &lt POWER RET &kp LGUI 
                         >;
                 };
-                        Qwertly_toggle {
+        
+                Qwertly_toggle {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -113,4 +114,5 @@
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                 >;
         };
+};
 };
