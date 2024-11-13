@@ -26,7 +26,16 @@
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                 };
+                lmt: layer_mod_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;    // <---[[moderate duration]]
+                        quick-tap-ms = <0>;
+                        flavor = "balanced";
+                        bindings = <&lm MODS>, <&kp>;
+                };
         };
+        
         macros {
                 lm: lm {
                         compatible = "zmk,behavior-macro-two-param";
@@ -45,8 +54,9 @@
                                 , <&macro_release &mo MACRO_PLACEHOLDER>
                                 ;
                 };
+
         }
-        
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -60,7 +70,7 @@
    &tog NUM_NAV &kp Q        &kp W &kp F    &kp P          &kp B                                           &kp J     &kp L         &kp U     &kp Y   &kp SEMI        &kp DEL
    &kp TAB      &kp A        &kp R &kp S    &kp T          &kp G                                           &kp M     &kp N         &kp E     &kp I   &kp O           &kp SQT
    &sk SWAP     &ltc MOUSE Z &kp X &kp C    &kp D          &kp V                                           &kp K     &kp H         &kp COMMA &kp DOT &ltc MOUSE FSLH &sk SWAP
-                                   &kp LALT &mt LCTRL DEL  &mt LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
+                                   &kp LALT &lmt LCTRL DEL &mt LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
                         >;
                 };
         
