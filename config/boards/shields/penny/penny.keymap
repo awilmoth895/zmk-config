@@ -82,7 +82,7 @@
                                 , <&macro_release &kp TAB>
                                 , <&macro_release &kp LSHIFT>
                                 ;
-                }
+                };
 
         };
         
