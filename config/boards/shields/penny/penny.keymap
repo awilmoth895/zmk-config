@@ -61,7 +61,7 @@
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
                         quick-tap-ms = <0>;
                         flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
+                        bindings = <&mos, <&kp>;
                 };
                 lmt: layer_mod_tap {
                         compatible = "zmk,behavior-hold-tap";
