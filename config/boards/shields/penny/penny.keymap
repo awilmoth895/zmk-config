@@ -17,25 +17,6 @@
 
 
 / {
-        behaviors {
-                ltc: layer_tap_custom {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;    // <---[[moderate duration]]
-                        quick-tap-ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                };
-                lmt: layer_mod_tap {
-                        compatible = "zmk,behavior-mod-tap";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;    // <---[[moderate duration]]
-                        quick-tap-ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&lm MODS>, <&kp>;
-                };
-        };
-        
         macros {
                 lm: lm {
                         compatible = "zmk,behavior-macro-two-param";
@@ -55,6 +36,25 @@
                                 ;
                 };
 
+        };
+        
+        behaviors {
+                ltc: layer_tap_custom {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;    // <---[[moderate duration]]
+                        quick-tap-ms = <0>;
+                        flavor = "balanced";
+                        bindings = <&kp>, <&kp>;
+                };
+                lmt: layer_mod_tap {
+                        compatible = "zmk,behavior-mod-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;    // <---[[moderate duration]]
+                        quick-tap-ms = <0>;
+                        flavor = "balanced";
+                        bindings = <&lm MODS>, <&kp>;
+                };
         };
 
         keymap {
