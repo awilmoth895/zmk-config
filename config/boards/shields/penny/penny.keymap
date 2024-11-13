@@ -103,7 +103,7 @@
                         flavor = "balanced";
                         bindings = <&lmm>, <&kp>;
                 };
-                lmnt: layer_mod_tap {
+                lmnt: layer_mod_nav_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
