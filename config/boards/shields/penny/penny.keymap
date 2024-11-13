@@ -169,7 +169,7 @@
 
                 num_nav_layer {
                         bindings = <
-   &trans &kp DOT   &kp N7 &kp N8            &kp N9          &kp K_AL_CALC                       &kp PG_UP &kp HOME  &kp UP   &kp END   &kp C_VOL_UP &trans
+   &trans &kp DOT   &kp N7 &kp N8            &kp N9          &kp C_AL_CALC                       &kp PG_UP &kp HOME  &kp UP   &kp END   &kp C_VOL_UP &trans
    &trans &kp PLUS  &kp N4 &kp N5            &kp N6          &kp STAR                            &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp C_VOL_DN &none
    &trans &kp MINUS &kp N1 &kp N2            &kp N3          &kp SLASH                           &kp WIN_L &kp WIN_R &trans   &trans    &trans       &trans
                            &lm MODS_NAV LALT &lmnt LCTRL DEL &trans        &ltc PROG N0   &trans &kp SPACE &trans    &trans
