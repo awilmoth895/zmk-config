@@ -42,7 +42,7 @@
                         tap-ms = <0>;
                         #binding-cells = <1>;
                         bindings
-                                , <&macro_press &mo MODS>
+                                = <&macro_press &mo MODS>
                                 , <&macro_param_1to1>
                                 , <&macro_press &kp MACRO_PLACEHOLDER>
                                 , <&macro_pause_for_release>
