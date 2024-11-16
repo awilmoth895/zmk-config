@@ -87,28 +87,39 @@
         };
         
         behaviors {
+                ltt: layer_tap_tap_custom {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;    // <---[[moderate duration]]
+                        quick-tap-ms = <200>;
+                        flavor = "tap-preferred";
+                        bindings = <&mo>, <&kp>;
+                };
+        
                 ltc: layer_tap_custom {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
                         quick-tap-ms = <200>;
-                        flavor = "balanced";
+                        flavor = "hold-preferred";
                         bindings = <&mo>, <&kp>;
                 };
+
                 lmt: layer_mod_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
                         quick-tap-ms = <200>;
-                        flavor = "balanced";
+                        flavor = "hold-preferred";
                         bindings = <&lmm>, <&kp>;
                 };
+
                 lmnt: layer_mod_nav_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
                         quick-tap-ms = <200>;
-                        flavor = "balanced";
+                        flavor = "hold-preferred";
                         bindings = <&lmmn>, <&kp>;
                 };
 
@@ -117,7 +128,7 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
                         quick-tap-ms = <200>;
-                        flavor = "balanced";
+                        flavor = "hold-preferred";
                         bindings = <&kp>, <&kp>;
                 };
         };
@@ -132,9 +143,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L         &kp U     &kp Y   &kp SEMI        &kp DEL
-   &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N         &kp E     &kp I   &kp O           &kp SQT
-   &sk SWAP     &ltc MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H         &kp COMMA &kp DOT &ltc MOUSE FSLH &sk SWAP
+   &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
+   &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
+   &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
                                    &lm MODS LALT &lmt LCTRL DEL &mtc LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
                         >;
                 };
