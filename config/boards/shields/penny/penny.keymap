@@ -42,7 +42,7 @@
                         bindings
                                 = <&macro_release &kp LCTRL>
                                 , <&macro_press &swap>     
-                                , <&macro_releasep &swap>
+                                , <&macro_release &swap>
                                 ;
                 }; 
 
