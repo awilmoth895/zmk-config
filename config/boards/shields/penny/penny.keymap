@@ -136,7 +136,7 @@
                         mods = <(MOD_LALT)>;
                 };
 
-                shft_stab: super_tab {
+                shft_stab: shift_super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&ctoa &astab>, <&atoc &cstab>;
