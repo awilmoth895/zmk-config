@@ -109,7 +109,7 @@
                                 ;
                 };
 
-                : shift_tab {
+                shift_tab: shift_tab {
                         compatible = "zmk,behavior-macro";
                         wait-ms = <0>;
                         tap-ms = <0>;
