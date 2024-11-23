@@ -41,7 +41,7 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_release &kp LCTRL>
-                                = <&macro_param_1to1>
+                                , <&macro_param_1to1>
                                 , <&macro_press MACRO_PLACEHOLDER>     
                                 , <&macro_release MACRO_PLACEHOLDER>
                                 ;
