@@ -43,6 +43,7 @@
                                 = <&macro_release &kp LCTRL>
                                 , <&macro_param_1to1>
                                 , <&macro_press MACRO_PLACEHOLDER>     
+                                , <&macro_param_1to1>
                                 , <&macro_release MACRO_PLACEHOLDER>
                                 ;
                 };
@@ -54,7 +55,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_release &kp LALT>
+                                , <&macro_param_1to1>
                                 , <&macro_press MACRO_PLACEHOLDER>     
+                                , <&macro_param_1to1>
                                 , <&macro_release MACRO_PLACEHOLDER>
                                 ;
                 }; 
@@ -129,14 +132,14 @@
                 stab: super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa atab>, <&atoc ctab>;
+                        bindings = <&ctoa &atab>, <&atoc &ctab>;
                         mods = <(MOD_LALT)>;
                 };
 
                 shft_stab: super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa astab>, <&atoc cstab>;
+                        bindings = <&ctoa &astab>, <&atoc &cstab>;
                         mods = <(MOD_LALT)>;
                 };
 
