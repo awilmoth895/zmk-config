@@ -35,33 +35,52 @@
 / {
         macros {
                 ctoa: ctrl_to_alt {
-                        compatible = "zmk,behavior-macro-one-param";
+                        compatible = "zmk,behavior-macro";
                         wait-ms = <0>;
                         tap-ms = <0>;
-                        #binding-cells = <1>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&macro_release &kp LCTRL>
-                                , <&macro_param_1to1>
-                                , <&macro_press MACRO_PLACEHOLDER>     
-                                , <&macro_param_1to1>
-                                , <&macro_release MACRO_PLACEHOLDER>
+                                , <&macro_press &atab>     
+                                , <&macro_release &atab>
+                                ;
+                };
+
+                sctoa: shift_ctrl_to_alt {
+                        compatible = "zmk,behavior-macro";
+                        wait-ms = <0>;
+                        tap-ms = <0>;
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_release &kp LCTRL>
+                                , <&macro_press &astab>     
+                                , <&macro_release &astab>
                                 ;
                 };
 
                 atoc: alt_to_ctrl {
-                        compatible = "zmk,behavior-macro-one-param";
+                        compatible = "zmk,behavior-macro";
                         wait-ms = <0>;
                         tap-ms = <0>;
-                        #binding-cells = <1>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&macro_release &kp LALT>
-                                , <&macro_param_1to1>
-                                , <&macro_press MACRO_PLACEHOLDER>     
-                                , <&macro_param_1to1>
-                                , <&macro_release MACRO_PLACEHOLDER>
+                                , <&macro_press &ctab>     
+                                , <&macro_release &ctab>
                                 ;
-                }; 
-
+                };
+                
+                satoc: shift_alt_to_ctrl {
+                        compatible = "zmk,behavior-macro";
+                        wait-ms = <0>;
+                        tap-ms = <0>;
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_release &kp LALT>
+                                , <&macro_press &cstab>     
+                                , <&macro_release &cstab>
+                                ;
+                };
                 lm: lm {
                         compatible = "zmk,behavior-macro-two-param";
                         wait-ms = <0>;
@@ -132,14 +151,14 @@
                 stab: super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa atab>, <&atoc ctab>;
+                        bindings = <&ctoa>, <&atoc>;
                         mods = <(MOD_LALT)>;
                 };
 
                 shft_stab: shift_super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa astab>, <&atoc cstab>;
+                        bindings = <&sctoa>, <&satoc>;
                         mods = <(MOD_LALT)>;
                 };
 
@@ -152,7 +171,7 @@
                 ctab: ctrl_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+                        bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
                 };
 
                 astab: alt_shift_tab {
@@ -164,7 +183,7 @@
                 cstab: ctrl_shift_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
+                        bindings = <&kt LCTRL>, <&kp LS(TAB)>, <&kt LCTRL>;
                 };
 
                 ltt: layer_tap_tap_custom {
