@@ -46,7 +46,7 @@
                                 ;
                 };
 
-                sctoa: shift_ctrl_to_alt {
+                sctoa: shift_ctrl_to_alt {      
                         compatible = "zmk,behavior-macro";
                         wait-ms = <0>;
                         tap-ms = <0>;
@@ -67,7 +67,7 @@
                                 = <&macro_release &kp LALT>
                                 , <&macro_press &ctab>     
                                 , <&macro_release &ctab>
-                                ;
+                                ;       
                 };
                 
                 satoc: shift_alt_to_ctrl {
@@ -151,15 +151,15 @@
                 stab: super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa>, <&atoc>;
-                        mods = <(MOD_LALT)>;
+                        bindings = <&ctoa>, <&atab>;
+                        mods = <(MOD_LCTRL)>;
                 };
 
                 shft_stab: shift_super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&sctoa>, <&satoc>;
-                        mods = <(MOD_LALT)>;
+                        bindings = <&sctoa>, <&astab>;
+                        mods = <(MOD_LCTRL)>;
                 };
 
                 atab: alt_tab {
