@@ -161,7 +161,7 @@
                         bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
                 };
                 
-                ctab: ctrl_shift_tab {
+                cstab: ctrl_shift_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
@@ -223,7 +223,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &swap        &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
+   &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
    &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
    &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
                                    &lm MODS LALT &lmt LCTRL DEL &mtc LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
