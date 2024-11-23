@@ -132,14 +132,14 @@
                 stab: super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa &atab>, <&atoc &ctab>;
+                        bindings = <&ctoa atab>, <&atoc ctab>;
                         mods = <(MOD_LALT)>;
                 };
 
                 shft_stab: shift_super_tab {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&ctoa &astab>, <&atoc &cstab>;
+                        bindings = <&ctoa astab>, <&atoc cstab>;
                         mods = <(MOD_LALT)>;
                 };
 
