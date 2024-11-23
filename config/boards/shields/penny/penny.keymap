@@ -19,6 +19,19 @@
 #define WIN_L LG(LC(LEFT))
 #define WIN_R RG(RC(RIGHT))
 
+&mmv {
+    acceleration-exponent = <1>;  // 1
+    time-to-max-speed-ms = <64>; // 300
+    delay-ms = <0>;
+    trigger-period-ms = <16>;      // 16
+};
+&msc {
+    acceleration-exponent = <0>;  // 0
+    time-to-max-speed-ms = <40>;  // 300
+    delay-ms = <0>;
+    trigger-period-ms = <16>;      // 16
+};
+
 / {
         macros {
                 lm: lm {
