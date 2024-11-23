@@ -41,8 +41,8 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&macro_release &kp LCTRL>
-                                , <&macro_press &swap>
-                                , <&macro_release &swap>
+                                , <&macro_press &swap>p       
+                                , <&macro_releasep        &swap>
                                 ;
                 }; 
 
@@ -175,7 +175,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &swa &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
+   &swap        &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
    &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
    &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
                                    &lm MODS LALT &lmt LCTRL DEL &mtc LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
