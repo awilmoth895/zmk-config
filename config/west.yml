@@ -6,10 +6,15 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: mouse
       url-base: https://github.com/petejohanson
+    - name: tri-state
+      url-base: https://github.com/dhruvinsh
   projects:
     - name: zmk
       remote: mouse
       revision: feat/pointers-move-scroll
       import: app/west.yml
+    - name: zmk-tri-state
+      remote: tri-state
+      revision: main
   self:
     path: config
