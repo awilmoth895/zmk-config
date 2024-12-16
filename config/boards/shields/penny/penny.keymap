@@ -148,19 +148,19 @@
         };
         
         behaviors {
-                stab: super_tab {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&ctoa>, <&atab>;
-                        mods = <(MOD_LCTRL)>;
-                };
+                // stab: super_tab {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&ctoa>, <&atab>;
+                //         mods = <(MOD_LCTRL)>;
+                // };
 
-                shft_stab: shift_super_tab {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&sctoa>, <&astab>;
-                        mods = <(MOD_LCTRL)>;
-                };
+                // shft_stab: shift_super_tab {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&sctoa>, <&astab>;
+                //         mods = <(MOD_LCTRL)>;
+                // };
 
                 atab: alt_tab {
                         compatible = "zmk,behavior-tri-state";
@@ -315,7 +315,7 @@
 
                 mod_layer {
                         bindings = <
-   &stab      &kp Q &kp W &kp F  &kp P  &kp B                  &kp J  &kp L  &kp U     &kp Y   &kp SEMI &none
+   &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &kp J  &kp L  &kp U     &kp Y   &kp SEMI &none
    &shft_stab &kp A &kp R &kp S  &kp T  &kp G                  &kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
