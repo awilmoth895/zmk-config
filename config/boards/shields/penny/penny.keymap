@@ -316,7 +316,7 @@
                 mod_layer {
                         bindings = <
    &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &kp J  &kp L  &kp U     &kp Y   &kp SEMI &none
-   &shft_stab &kp A &kp R &kp S  &kp T  &kp G                  &kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &trans &kp A &kp R &kp S  &kp T  &kp G                  &kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
@@ -325,7 +325,7 @@
                 mod_nav_layer {
                         bindings = <
    &stab      &kp Q &kp W &kp F  &kp P  &kp B                  &trans &trans &trans &trans &trans &none
-   &shft_stab &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
+   &trans &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &trans &trans &trans &trans &trans &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
