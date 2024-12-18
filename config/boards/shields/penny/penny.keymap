@@ -327,7 +327,7 @@
                 mod_nav_layer {
                         bindings = <
    &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &trans &trans &trans &trans &trans &none
-   &sctoa    z &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
+   &sctoa     &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &trans &trans &trans &trans &trans &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
