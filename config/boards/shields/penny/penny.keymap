@@ -190,7 +190,8 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;    // <---[[moderate duration]]
-                        quick-tap-ms = <200>;
+                        quick-tap-ms = <175>;
+                        require-prior-idle-ms = <150>;
                         flavor = "tap-preferred";
                         bindings = <&mo>, <&kp>;
                 };
@@ -245,7 +246,7 @@
    &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
    &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
    &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
-                                   &lm MODS LALT &lmt LCTRL DEL &mtc LSHFT BSPC &ltc PROG TAB   &ltc NUM_NAV ESC &kp SPACE &ltc POWER RET &kp LGUI 
+                                   &lm MODS LALT &lmt LCTRL ESC &mtc LSHFT BSPC &ltc PROG DEL   &ltc NUM_NAV TAB &kp SPACE &ltc POWER RET &kp LGUI 
                         >;
                 };
         
@@ -316,7 +317,7 @@
                 mod_layer {
                         bindings = <
    &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &kp J  &kp L  &kp U     &kp Y   &kp SEMI &none
-   &trans &kp A &kp R &kp S  &kp T  &kp G                  &kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &sctoa     &kp A &kp R &kp S  &kp T  &kp G                  &kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
@@ -325,7 +326,7 @@
                 mod_nav_layer {
                         bindings = <
    &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &trans &trans &trans &trans &trans &none
-   &trans &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
+   &sctoa    z &kp A &kp R &kp S  &kp T  &kp G                  &trans &trans &trans &trans &trans &none
    &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &trans &trans &trans &trans &trans &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
