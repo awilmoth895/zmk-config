@@ -21,14 +21,15 @@
 #define WIN_R RG(RC(RIGHT))
 
 &mmv {
-    acceleration-exponent = <1>;  // 1
+    acceleration-exponent = <2>;  // 1
     time-to-max-speed-ms = <64>; // 300
     delay-ms = <0>;
     trigger-period-ms = <16>;      // 16
 };
+
 &msc {
-    acceleration-exponent = <0>;  // 0
-    time-to-max-speed-ms = <40>;  // 300
+    acceleration-exponent = <1>;  // 0
+    time-to-max-speed-ms = <300>;  // 300
     delay-ms = <0>;
     trigger-period-ms = <16>;      // 16
 };
@@ -149,6 +150,19 @@
         };
         
         behaviors {
+                td_mt: tap_dance_mod_tap {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&mmv MOVE_LEFT>, <&mmvf MOVE_LEFT>;
+                };
+                mmvf: mouse_movement_fast {
+                        compatible = "zmk,behavior-input-two-axis"
+                        acceleration-exponent = <1>;  // 1
+                        time-to-max-speed-ms = <64>; // 300
+                        delay-ms = <0>;
+                        trigger-period-ms = <8>;      // 16
+                };
                 // stab: super_tab {
                 //         compatible = "zmk,behavior-mod-morph";
                 //         #binding-cells = <0>;
