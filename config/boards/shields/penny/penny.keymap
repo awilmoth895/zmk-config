@@ -157,7 +157,7 @@
                         bindings = <&mmv MOVE_LEFT>, <&mmvf MOVE_LEFT>;
                 };
                 mmvf: mouse_movement_fast {
-                        compatible = "zmk,behavior-input-two-axis"
+                        compatible = "zmk,behavior-input-two-axis";
                         acceleration-exponent = <1>;  // 1
                         time-to-max-speed-ms = <64>; // 300
                         delay-ms = <0>;
