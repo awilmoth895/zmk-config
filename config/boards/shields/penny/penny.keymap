@@ -20,6 +20,20 @@
 #define WIN_L LG(LC(LEFT))
 #define WIN_R RG(RC(RIGHT))
 
+&mmv {
+        acceleration-exponent = <2>;  // 1
+        time-to-max-speed-ms = <64>; // 300
+        delay-ms = <0>;
+        trigger-period-ms = <16>;      // 16
+};
+
+&msc {
+        acceleration-exponent = <1>;  // 0
+        time-to-max-speed-ms = <300>;  // 300
+        delay-ms = <0>;
+        trigger-period-ms = <16>;      // 16
+};
+
 / {
         macros {
                 ctoa: ctrl_to_alt {
@@ -136,19 +150,6 @@
         };
         
         behaviors {
-                mmv: mouse_movement {
-                        acceleration-exponent = <2>;  // 1
-                        time-to-max-speed-ms = <64>; // 300
-                        delay-ms = <0>;
-                        trigger-period-ms = <16>;      // 16
-                };
-
-                msc: mouse_scroll  {
-                        acceleration-exponent = <1>;  // 0
-                        time-to-max-speed-ms = <300>;  // 300
-                        delay-ms = <0>;
-                        trigger-period-ms = <16>;      // 16
-                };
                 // td_mt: tap_dance_mod_tap {
                 //         compatible = "zmk,behavior-tap-dance";
                 //         #binding-cells = <0>;
