@@ -181,7 +181,7 @@
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-                        ignored-key-position = <12>;
+                        ignored-key-positions = <12>;
                 };
                 
                 // ctab: ctrl_tab {
@@ -194,7 +194,7 @@
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
                         bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
-                        ignored-key-position = <0>;
+                        ignored-key-positions = <0>;
 
                 };
                 
