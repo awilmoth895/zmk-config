@@ -150,6 +150,18 @@
         };
         
         behaviors {
+                kt_on: key_toggle_on_only {
+                        compatible = "zmk,behavior-key-toggle";
+                        #binding-cells = <1>;
+                        display-name = "Key Toggle On";
+                        toggle-mode = "on";
+                }; 
+                kt_off: key_toggle_off_only {
+                        compatible = "zmk,behavior-key-toggle";
+                        #binding-cells = <1>;
+                        display-name = "Key Toggle Off";
+                        toggle-mode = "off";
+                };
                 // td_mt: tap_dance_mod_tap {
                 //         compatible = "zmk,behavior-tap-dance";
                 //         #binding-cells = <0>;
@@ -180,7 +192,7 @@
                 atab: alt_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+                        bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
                         ignored-key-positions = <12>;
                 };
                 
@@ -193,7 +205,7 @@
                 astab: alt_shift_tab {
                         compatible = "zmk,behavior-tri-state";
                         #binding-cells = <0>;
-                        bindings = <&kt LALT>, <&kp LS(TAB)>, <&kt LALT>;
+                        bindings = <&kt_on LALT>, <&kp LS(TAB)>, <&kt_off LALT>;
                         ignored-key-positions = <0>;
 
                 };
