@@ -404,9 +404,9 @@
                 
                 mod_win_man_layer {
                         bindings = <
-   &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &kp PG_UP &kp HOME  &kp UP   &kp END   &kp C_VOL_UP &trans
-   &sctoa     &kp A &kp R &kp S  &kp T  &kp G                  &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp C_VOL_DN &none
-   &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &kp WIN_L &kp WIN_R &trans   &trans    &trans       &trans
+   &ctoa      &kp Q &kp W &kp F  &kp P  &kp B                  &kp LC(UP)   &kp LA(LEFT) &kp UP   &kp LA(RIGHT) &kp C_VOL_UP &trans
+   &sctoa     &kp A &kp R &kp S  &kp T  &kp G                  &kp LC(DOWN) &kp LEFT     &kp DOWN &kp RIGHT     &kp C_VOL_DN &none
+   &kp LSHFT  &kp Z &kp X &kp C  &kp D  &kp V                  &kp WIN_L    &kp WIN_R    &trans   &trans        &trans       &trans
                          &trans &trans &trans &trans   &trans &trans &trans &trans
                         >;
                 };
