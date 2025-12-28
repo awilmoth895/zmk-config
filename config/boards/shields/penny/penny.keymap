@@ -266,17 +266,31 @@
         keymap {
                 compatible = "zmk,keymap";
 
+//                 default_old_layer {
+// // -----------------------------------------------------------------------------------------
+// // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//                         bindings = <
+//    &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
+//    &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
+//    &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
+//                                    &lm MODS LALT &lmt LCTRL ESC &mtc LSHFT BSPC &ltc PROG DEL   &ltc NUM_NAV TAB &kp SPACE &ltc POWER RET &kp LGUI 
+//                         >;
+//                 };
+
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |NUMNAV|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SWAP |  Zm |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | LGUI | DEL/LCTRL | BSPC/LSHFT | ESC/MOD1 | | TAB/MOD2 | SPACE  | RET/POWER | LALT |
                         bindings = <
    &tog NUM_NAV &kp Q        &kp W &kp F    &kp P               &kp B                                            &kp J     &kp L          &kp U     &kp Y   &kp SEMI &kp DEL
    &kp TAB      &kp A        &kp R &kp S    &kp T               &kp G                                            &kp M     &kp N          &kp E     &kp I   &kp O    &kp SQT
    &sk SWAP     &ltt MOUSE Z &kp X &kp C    &kp D               &kp V                                            &kp K     &kp H          &kp COMMA &kp DOT &kp FSLH &sk SWAP
-                                   &lm MODS LALT &lmt LCTRL ESC &mtc LSHFT BSPC &ltc PROG DEL   &ltc NUM_NAV TAB &kp SPACE &ltc POWER RET &kp LGUI 
+                                   &lm MODS LGUI &lmt LCTRL DEL &mtc LSHFT BSPC &ltc PROG ESC   &ltc NUM_NAV TAB &kp SPACE &ltc POWER RET &kp LALT 
                         >;
                 };
         
