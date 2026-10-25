@@ -235,7 +235,7 @@
                         >;
                 };
 
-               num_layer {
+                num_layer {
                         bindings = <
    &trans &kp DOT   &kp N7            &kp N8          &kp N9 &kp DOT         &kp PG_UP &kp HOME &kp UP   &kp END   &kp C_VOL_UP &trans
    &trans &kp PLUS  &kp N4            &kp N5          &kp N6 &kp STAR        &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp C_VOL_DN &none
@@ -257,7 +257,7 @@
                         bindings = <
    &kp ESC &kp Q &kp W     &kp E     &kp R     &kp T           &kp Y   &kp U     &kp I     &kp O     &kp O    &kp BSPC
    &kp TAB &kp A &kp S     &kp D     &kp F     &kp G           &kp H   &kp J     &kp K     &kp L     &kp SQT  &kp RET
-   &trans  &kp z &kp C     &kp C     &kp V     &kp B           &kp N   &kp M     &kp COMMA &kp DOT   &kp FSLH &trans
+   &trans  &kp Z &kp C     &kp C     &kp V     &kp B           &kp N   &kp M     &kp COMMA &kp DOT   &kp FSLH &trans
                  &kp LCTRL &kp LSHFT &kp SPACE &kp ESC         &mo NUM &kp SPACE &kp LGUI  &kp RCTRL
                         >;
                 };
@@ -271,7 +271,7 @@
                         bindings = <
    &kp ESC   &kp Q &kp W     &kp E    &kp R     &kp T           &kp Y  &kp U     &kp I     &kp O     &kp O    &kp BSPC
    &kp TAB   &kp A &kp S     &kp D    &kp F     &kp G           &kp H  &kp J     &kp K     &kp L     &kp SQT  &kp RET
-   &kp LSHFT &kp z &kp C     &kp C    &kp V     &kp B           &kp N  &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
+   &kp LSHFT &kp Z &kp C     &kp C    &kp V     &kp B           &kp N  &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
                    &kp LCTRL &kp LALT &kp SPACE &mo FN          &mo FN &kp SPACE &kp LGUI  &kp RCTRL
                         >;
                 };
