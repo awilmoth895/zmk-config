@@ -248,7 +248,7 @@
                         bindings = <
    &trans &kp EXCL  &kp AT    &kp HASH &kp DLLR  &kp PRCNT          &kp CARET &kp AMPS &kp STAR &kp PIPE  &none     &trans
    &trans &kp PLUS  &kp UNDER &kp LBRC &kp RBRC  &kp STAR           &kp TILDE &kp LPAR &kp RPAR &kp COLON &kp SEMI  &kp DQT
-   &tog Game &kp MINUS &kp EQUAL &kp BSLH &kp LBKT  &kp SLASH          &kp GRAVE &kp RBKT &kp LT   &kp GT    &kp QMARK &tog EASY
+   &tog GAME &kp MINUS &kp EQUAL &kp BSLH &kp LBKT  &kp SLASH          &kp GRAVE &kp RBKT &kp LT   &kp GT    &kp QMARK &tog EASY
                     &trans    &trans   &kp ENTER &trans             &trans    &trans   &trans   &trans
                         >;
                 };
